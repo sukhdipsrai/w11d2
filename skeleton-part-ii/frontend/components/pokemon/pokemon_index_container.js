@@ -8,8 +8,11 @@ const mapStateToProps = state => ({
   pokemon: selectAllPokemon(state)
 })
 
-const mapDispatchToProps = dispatch => ({
-  requestAllPokemon: () => dispatch(requestAllPokemon())
-})
+const mapDispatchToProps = dispatch => {
+  debugger
+  return({
+    requestAllPokemon: () => dispatch(requestAllPokemon())
+  })
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(PokemonIndex)

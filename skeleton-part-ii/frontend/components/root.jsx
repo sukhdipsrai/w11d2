@@ -4,12 +4,16 @@ import PokemonIndexContainer from './../components/pokemon/pokemon_index_contain
 import App from "./app"
 import {HashRouter} from "react-router-dom"
 import PokemonDetail from './pokemon/pokemon_detail';
-
+import {Route} from "react-router-dom"
 const Root = ({ store }) => (
   <Provider store={store}>
     <HashRouter>
       <App/>
-      <PokemonDetail/>
+      
+
+       <Route path='/pokemon/:id'
+        component={PokemonDetail}
+       />
     </HashRouter>
   </Provider>
 );

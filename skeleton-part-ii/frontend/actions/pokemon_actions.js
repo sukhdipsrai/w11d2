@@ -13,8 +13,8 @@ export const receiveSinglePokemon = (poke) => ({
   poke
 })
 
-export const requestSinglePokemon = () => (dispatch) => (
-  APIUtil.fetchpokemon(this.props.match.params.id)
+export const requestSinglePokemon = (myid) => (dispatch) => (
+  APIUtil.fetchpokemon(myid)
     .then(poke => dispatch(receiveSinglePokemon(poke)))
 )
 
